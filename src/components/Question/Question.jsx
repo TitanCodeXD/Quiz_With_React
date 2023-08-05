@@ -12,7 +12,7 @@ const Question = () => {
     const currentQuestion = quizState.questions[quizState.currentQuestion];
 
   return (
-    <div>
+    <div id = "question">
 
     <p>Pergunta {quizState.currentQuestion + 1} de {quizState.questions.length}</p>
     <h2>{currentQuestion.question}</h2>
@@ -21,7 +21,9 @@ const Question = () => {
         <p>Opções</p>
     </div>
 
-<button>Continuar</button>
+<button onClick={() => dispatch({type: "CHANGE_QUESTION"})}>
+    Continuar
+    </button>
 
     </div>
   )
