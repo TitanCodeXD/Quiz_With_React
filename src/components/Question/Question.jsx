@@ -11,6 +11,13 @@ const Question = () => {
     
     const currentQuestion = quizState.questions[quizState.currentQuestion];
 
+    const onSelectOption = (option) => {
+        dispatch({type: "CHECK_ANSWER",
+        payload: {answer: currentQuestion.answer, option}
+    });
+
+    };
+
   return (
     <div id = "question">
 
@@ -19,13 +26,19 @@ const Question = () => {
 
     <div id = "options-container">
         {currentQuestion.options.map((option) => (
-        <Option option={option} key ={option}/>
+        <Option option={option} 
+        key ={option} 
+        answer={currentQuestion.answer}
+        selectOption={() => onSelectOption(option)}
+        />
         ))}
     </div>
 
+{quizState.answerSelected && (
 <button onClick={() => dispatch({type: "CHANGE_QUESTION"})}>
     Continuar
     </button>
+)}
 
     </div>
   )
