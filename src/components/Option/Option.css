@@ -19,3 +19,13 @@ margin-bottom: 0;
 
 }
 
+.correct {
+    background-color: #0bfc03; /*opcional -> #0bfc03*/
+    font-weight: bold;
+}
+
+.wrong {
+    background-color: red; /*opcional -> #3c0e70*/
+    opacity: 0.2;
+
+}
