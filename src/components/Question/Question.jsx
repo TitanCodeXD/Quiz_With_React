@@ -1,8 +1,7 @@
 import React from 'react'
 import { useContext } from 'react';
 import { QuizContext } from '../../context/quiz';
-
-import xx from './Question.css';
+import './Question.css';
 
 
 const Question = () => {

@@ -1,5 +1,6 @@
 import { createContext, useReducer } from "react"; 
 import questions from '../data/questions';
+import Question from "../components/Question/Question";
 
 const STAGES = ["Start", "Playing","End"];
 
@@ -32,10 +33,16 @@ console.log(state, action);
 
             case "CHANGE_QUESTION":
             const nextQuestion = state.currentQuestion + 1;
+            let endGame = false;
+
+            if(!questions[nextQuestion]) {
+                endGame = true;
+            }
 
             return {
                ...state,
                currentQuestion: nextQuestion,
+               gameStage: endGame ? STAGES[2] : state.gameStage,
             };
 
 

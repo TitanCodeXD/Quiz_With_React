@@ -1,0 +1,26 @@
+#gameover {
+    /*margin-top: 50px;*/ /*Opcional para centralizar mais a caixa de questões*/ 
+    text-align: center;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#gameover h2, p {
+    margin-bottom: 1rem;
+}
+
+#gameover p {
+    color: #8435de;
+    margin-bottom: 1rem;
+}
+
+#gameover img {
+    margin: 3rem;
+    height: 400px;
+}
+
+
+#options-container {
+
+}
